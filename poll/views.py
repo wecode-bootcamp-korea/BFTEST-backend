@@ -96,3 +96,5 @@ class ResultView(View):
 
         except KeyError:
             return JsonResponse({"error" : "INVALID_KEYS"}, status = 400)
+        except json.decoder.JSONDecodeError:
+            return JsonResponse({"error" : "INVALID_KEYS"}, status = 400)

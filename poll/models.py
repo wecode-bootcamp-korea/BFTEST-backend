@@ -38,7 +38,7 @@ class Stack(models.Model):
 class User(models.Model):
     name       = models.CharField(max_length = 100, null = True)
     result     = models.ForeignKey('Result', on_delete = models.SET_NULL, null = True)
-    browser    = models.CharField(max_length = 100, null = True)
+    browser    = models.CharField(max_length = 500, null = True)
     ip_address = models.CharField(max_length = 100, null = True)
     created_at = models.DateTimeField(auto_now_add = True)
 
